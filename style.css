@@ -40,19 +40,15 @@ body {
 /* --- Hero Section (اصلاح شده با تصویر خط تولید) --- */
 .hero {
     height: 100vh;
-    /* تصویر خط تولید اتوماتیک با کیفیت بالا */
-    background: linear-gradient(var(--overlay), var(--overlay)), 
-                url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1500');
+    /* اینجا آدرس عکس جدید را می‌دهیم: پوشه images و فایل hero-bg.jpg */
+    background: linear-gradient(rgba(45, 106, 79, 0.8), rgba(27, 67, 50, 0.8)), 
+                url('images/hero-bg.png');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* افکت پارالاکس */
     display: flex;
     align-items: center;
-    justify-content: center;
     color: white;
-    text-align: center;
-    clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
-    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 
 .hero-content {
@@ -120,3 +116,4 @@ body {
     background: #ffffff;
     padding: 40px;
     bord
+
