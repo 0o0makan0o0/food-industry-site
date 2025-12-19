@@ -111,7 +111,7 @@
                         <span class="badge bg-warning text-dark mb-2">جدیدترین شماره</span>
                         <h2 class="fw-bold mb-4">نشریه علمی "تکاپوی صنعت"</h2>
                         <p class="text-muted mb-4">در این شماره به بررسی هوش مصنوعی در صنایع غذایی و چالش‌های بسته‌بندی پایدار پرداخته‌ایم.</p>
-                        <!-- اصلاح لینک دانلود نشریه -->
+                        <!-- لینک دانلود -->
                         <a href="assets/files/magazine.pdf" class="btn-download" download>
                             <i class="fas fa-file-pdf"></i> دانلود نشریه (PDF)
                         </a>
@@ -130,7 +130,7 @@
                 <p class="mb-4 text-muted">جدیدترین نسخه چارت درسی مقطع کارشناسی را از اینجا دریافت کنید</p>
                 <div class="row justify-content-center">
                     <div class="col-md-6">
-                        <!-- اصلاح لینک دانلود چارت -->
+                        <!-- لینک دانلود -->
                         <a href="assets/files/chart.pdf" class="btn btn-outline-success w-100 py-3 rounded-pill fw-bold" download>
                             <i class="fas fa-download me-2"></i> دانلود چارت کارشناسی ۱۴۰۳
                         </a>
@@ -157,10 +157,18 @@
                     </div>
                 </div>
                 <div class="col-md-6 reveal">
-                    <form id="contactForm" class="bg-white p-4 rounded-4 shadow-sm">
-                        <input type="text" class="form-control mb-3" placeholder="نام شما" required>
-                        <input type="email" class="form-control mb-3" placeholder="ایمیل" required>
-                        <textarea class="form-control mb-3" rows="4" placeholder="پیام شما"></textarea>
+                    <!-- فرم اصلاح شده برای Formspree -->
+                    <form id="contactForm" action="https://formspree.io/f/xrezbpdd" method="POST" class="bg-white p-4 rounded-4 shadow-sm">
+                        
+                        <!-- اضافه شدن name="name" -->
+                        <input type="text" name="name" class="form-control mb-3" placeholder="نام شما" required>
+                        
+                        <!-- اضافه شدن name="email" -->
+                        <input type="email" name="email" class="form-control mb-3" placeholder="ایمیل" required>
+                        
+                        <!-- اضافه شدن name="message" -->
+                        <textarea name="message" class="form-control mb-3" rows="4" placeholder="پیام شما" required></textarea>
+                        
                         <button type="submit" class="btn btn-success w-100 py-2">ارسال پیام</button>
                     </form>
                 </div>
@@ -178,4 +186,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
