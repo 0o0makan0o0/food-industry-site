@@ -1,191 +1,133 @@
-:root {
-    --green: #4CAF50;
-    --orange: #FF9800;
-    --brown: #6D4C41;
-    --cream: #FFF8E1;
-    --dark: #2E2E2E;
-}
+/* Fonts */
+@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
 
-* {
-    box-sizing: border-box;
-    font-family: 'Vazirmatn', sans-serif;
-    margin: 0;
-    padding: 0;
+:root {
+    --primary-green: #2d6a4f;
+    --secondary-orange: #ff9f1c;
+    --cream: #fefae0;
+    --dark: #1b4332;
 }
 
 body {
-    background: var(--cream);
+    font-family: 'Vazirmatn', sans-serif;
     color: var(--dark);
-    line-height: 1.8;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
-.header {
-    min-height: 100vh;
-    background: linear-gradient(120deg, var(--green), var(--orange));
-    color: white;
-    position: relative;
-}
-
+/* Navbar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    border-bottom: 2px solid var(--primary-green);
 }
 
-.nav-links {
-    display: flex;
-    gap: 20px;
-    list-style: none;
+.nav-link {
+    color: var(--primary-green) !important;
+    font-weight: 600;
 }
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.menu-toggle {
-    display: none;
-    font-size: 24px;
-}
-
+/* Hero */
 .hero {
-    text-align: center;
-    margin-top: 120px;
-    padding: 20px;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-}
-
-.btn-primary, .btn-download {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 30px;
-    background: var(--brown);
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: 0.3s;
-}
-
-.btn-primary:hover, .btn-download:hover {
-    transform: translateY(-3px);
-    background: var(--dark);
-}
-
-.section {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.gradient {
-    background: linear-gradient(120deg, var(--orange), var(--green));
-    color: white;
-}
-
-.cards {
+    height: 100vh;
+    background: linear-gradient(rgba(45, 106, 79, 0.8), rgba(27, 67, 50, 0.8)), 
+                url('https://images.unsplash.com/photo-1556761175-4b46a572b186?q=80&w=1500');
+    background-size: cover;
+    background-position: center;
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 40px;
+    align-items: center;
+    color: white;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 
-.card {
-    width: 200px;
-    height: 200px;
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+/* 3D Flip Cards */
+.card-3d {
     perspective: 1000px;
+    height: 250px;
 }
 
 .card-inner {
-    width: 100%;
-    height: 100%;
     position: relative;
-    transform-style: preserve-3d;
+    width: 100%; height: 100%;
     transition: transform 0.8s;
+    transform-style: preserve-3d;
 }
 
-.card:hover .card-inner {
-    transform: rotateY(180deg);
-}
+.card-3d:hover .card-inner { transform: rotateY(180deg); }
 
 .card-front, .card-back {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
     backface-visibility: hidden;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    padding: 20px;
-}
-
-.card-front {
-    background: var(--green);
-    color: white;
-}
-
-.card-back {
-    background: var(--brown);
-    color: white;
-    transform: rotateY(180deg);
-}
-
-.magazine-card {
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    max-width: 400px;
-    margin: auto;
-}
-
-form {
-    max-width: 400px;
-    margin: auto;
-    display: flex;
     flex-direction: column;
-    gap: 15px;
-}
-
-input, textarea {
-    padding: 12px;
-    border-radius: 10px;
-    border: none;
-}
-
-.footer {
-    background: var(--dark);
-    color: white;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
     padding: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
-.socials i {
-    margin: 0 10px;
-    cursor: pointer;
+.card-front { background: var(--cream); border: 1px solid #ddd; }
+.card-back { background: var(--primary-green); color: white; transform: rotateY(180deg); }
+
+/* Magazine */
+.magazine-box {
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    border-right: 10px solid var(--secondary-orange);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
 }
 
+.magazine-img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Download Button */
+.btn-download {
+    background: var(--secondary-orange);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.btn-download:hover {
+    background: var(--primary-green);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Download Section Container */
+.download-container {
+    background: #f1f8f5;
+    border-radius: 40px;
+    border: 2px dashed var(--primary-green);
+}
+
+/* Animations */
 .reveal {
     opacity: 0;
-    transform: translateY(50px);
-    transition: 0.8s;
+    transform: translateY(30px);
+    transition: 1s all ease;
 }
 
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    .menu-toggle {
-        display: block;
-    }
 }

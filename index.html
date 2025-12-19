@@ -1,108 +1,177 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>انجمن علمی صنایع غذایی</title>
-
-    <!-- Persian Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>انجمن علمی صنایع غذایی | دانشگاه</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="header">
-    <nav class="navbar">
-        <div class="logo">🥗 انجمن صنایع غذایی</div>
-        <ul class="nav-links">
-            <li><a href="#about">معرفی رشته</a></li>
-            <li><a href="#chart">دانلود چارت</a></li>
-            <li><a href="#magazine">نشریه</a></li>
-            <li><a href="#contact">تماس با ما</a></li>
-        </ul>
-        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="#">
+                <i class="fas fa-leaf text-success"></i> انجمن صنایع غذایی
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">خانه</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#intro">معرفی رشته</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#magazine">نشریه</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#download">دانلود چارت</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">تماس با ما</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <div class="hero">
-        <h1>انجمن علمی دانشجویی صنایع غذایی</h1>
-        <p>پیوند علم، صنعت و نوآوری در دنیای غذا</p>
-        <a href="#about" class="btn-primary">بیشتر بدانید</a>
-    </div>
-</header>
-
-<section id="about" class="section reveal">
-    <h2>🍞 معرفی رشته صنایع غذایی</h2>
-    <p>
-        رشته صنایع غذایی به بررسی فرآوری، نگهداری، کنترل کیفیت و توسعه محصولات غذایی می‌پردازد.
-        این رشته نقش کلیدی در سلامت جامعه، امنیت غذایی و توسعه پایدار دارد.
-    </p>
-
-    <div class="cards">
-        <div class="card flip">
-            <div class="card-inner">
-                <div class="card-front">کنترل کیفیت</div>
-                <div class="card-back">بررسی ایمنی، استانداردها و سلامت مواد غذایی</div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 hero-content">
+                    <h1>تلفیق دانش، سلامت و صنعت</h1>
+                    <p class="fs-5 mb-5 opacity-75">وب‌سایت مرجع انجمن علمی صنایع غذایی. فضایی برای یادگیری، اشتراک دانش و دسترسی به منابع علمی روز.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#magazine" class="btn-download">
+                            <i class="fas fa-book-open"></i> آخرین نشریه
+                        </a>
+                        <a href="#download" class="btn btn-outline-light rounded-pill px-4">مشاهده چارت درسی</a>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="card flip">
-            <div class="card-inner">
-                <div class="card-front">فرآوری</div>
-                <div class="card-back">تبدیل مواد خام به محصولات با ارزش افزوده</div>
+    <!-- Introduction (3D Cards) -->
+    <section id="intro" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5 reveal">
+                <h2 class="fw-bold">معرفی رشته صنایع غذایی</h2>
+                <div class="mx-auto bg-warning" style="height: 4px; width: 60px;"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 card-3d reveal">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fas fa-vial fa-3x mb-3 text-success"></i>
+                            <h4>شیمی مواد غذایی</h4>
+                        </div>
+                        <div class="card-back">
+                            <p>بررسی ترکیبات و اثرات فرآوری بر خواص فیزیکی مواد خوراکی.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 card-3d reveal">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fas fa-microscope fa-3x mb-3 text-success"></i>
+                            <h4>میکروبیولوژی</h4>
+                        </div>
+                        <div class="card-back">
+                            <p>مطالعه میکروارگانیسم‌ها در تولید و نگهداری محصولات.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 card-3d reveal">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fas fa-industry fa-3x mb-3 text-success"></i>
+                            <h4>تکنولوژی تولید</h4>
+                        </div>
+                        <div class="card-back">
+                            <p>آشنایی با خطوط تولید مدرن و روش‌های نوین بسته‌بندی.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="card flip">
-            <div class="card-inner">
-                <div class="card-front">تحقیق و توسعه</div>
-                <div class="card-back">نوآوری در محصولات و تکنولوژی غذایی</div>
+    <!-- Magazine Section -->
+    <section id="magazine" class="py-5 bg-light">
+        <div class="container">
+            <div class="magazine-box reveal">
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center">
+                        <img src="https://via.placeholder.com/300x400/2d6a4f/ffffff?text=Magazine" alt="Magazine" class="magazine-img">
+                    </div>
+                    <div class="col-md-8 ps-md-5">
+                        <span class="badge bg-warning text-dark mb-2">جدیدترین شماره</span>
+                        <h2 class="fw-bold mb-4">نشریه علمی "تکاپوی صنعت"</h2>
+                        <p class="text-muted mb-4">در این شماره به بررسی هوش مصنوعی در صنایع غذایی و چالش‌های بسته‌بندی پایدار پرداخته‌ایم.</p>
+                        <a href="#" class="btn-download">
+                            <i class="fas fa-file-pdf"></i> دانلود نشریه (PDF)
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="chart" class="section gradient reveal">
-    <h2>📊 دانلود چارت رشته / انجمن</h2>
-    <p>چارت درسی یا ساختار سازمانی انجمن را دانلود کنید</p>
-    <a href="assets/files/chart.pdf" download class="btn-download">
-        <i class="fas fa-download"></i> دانلود چارت
-    </a>
-</section>
+    <!-- Download Chart Section -->
+    <section id="download" class="py-5">
+        <div class="container text-center reveal">
+            <div class="download-container p-5">
+                <i class="fas fa-sitemap fa-4x mb-4 text-success"></i>
+                <h2 class="fw-bold mb-3">چارت تحصیلی</h2>
+                <p class="mb-4 text-muted">جدیدترین نسخه چارت درسی مقطع کارشناسی را از اینجا دریافت کنید</p>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <a href="#" class="btn btn-outline-success w-100 py-3 rounded-pill fw-bold">
+                            <i class="fas fa-download me-2"></i> دانلود چارت کارشناسی ۱۴۰۳
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="magazine" class="section reveal">
-    <h2>📘 دانلود نشریه جدید</h2>
-    <div class="magazine-card">
-        <h3>نشریه علمی – شماره جدید</h3>
-        <p>شامل مقالات علمی، اخبار انجمن و فعالیت‌های دانشجویی</p>
-        <a href="assets/files/magazine-latest.pdf" download class="btn-primary">
-            دانلود PDF
-        </a>
-    </div>
-</section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-6 reveal">
+                    <h2 class="fw-bold mb-4">تماس با انجمن</h2>
+                    <p>دانشگاه، دانشکده صنایع غذایی، دفتر انجمن علمی</p>
+                    <div class="d-flex mb-3 align-items-center">
+                        <i class="fas fa-envelope me-3 text-success fs-4"></i>
+                        <span>foodscience@uni.ac.ir</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <i class="fab fa-instagram me-3 text-danger fs-4"></i>
+                        <span>@FoodScience_Uni</span>
+                    </div>
+                </div>
+                <div class="col-md-6 reveal">
+                    <form id="contactForm" class="bg-white p-4 rounded-4 shadow-sm">
+                        <input type="text" class="form-control mb-3" placeholder="نام شما" required>
+                        <input type="email" class="form-control mb-3" placeholder="ایمیل" required>
+                        <textarea class="form-control mb-3" rows="4" placeholder="پیام شما"></textarea>
+                        <button type="submit" class="btn btn-success w-100 py-2">ارسال پیام</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="contact" class="section gradient reveal">
-    <h2>📞 تماس با ما</h2>
-    <form id="contactForm">
-        <input type="text" placeholder="نام شما" required>
-        <input type="email" placeholder="ایمیل" required>
-        <textarea placeholder="پیام شما" required></textarea>
-        <button type="submit" class="btn-primary">ارسال پیام</button>
-    </form>
-</section>
+    <footer class="py-4 text-center bg-dark text-white">
+        <p class="mb-0 small">© ۱۴۰۳ انجمن علمی صنایع غذایی - تمامی حقوق محفوظ است.</p>
+    </footer>
 
-<footer class="footer">
-    <p>© 2025 انجمن علمی صنایع غذایی دانشگاه</p>
-    <div class="socials">
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-telegram"></i>
-        <i class="fab fa-linkedin"></i>
-    </div>
-</footer>
-
-<script src="script.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 </body>
 </html>
